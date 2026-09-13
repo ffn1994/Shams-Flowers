@@ -37,7 +37,15 @@ function InstagramIcon({ className = 'h-6 w-6' }) {
   );
 }
 
-/** قنوات التواصل: واتساب، اتصال، إنستغرام */
+function FacebookIcon({ className = 'h-6 w-6' }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M14 9V7.2c0-.8.2-1.2 1.4-1.2H17V3.2C16.6 3.1 15.7 3 14.7 3 12.3 3 11 4.3 11 6.8V9H8.6v3H11v9h3v-9h2.4l.4-3H14Z" />
+    </svg>
+  );
+}
+
+/** قنوات التواصل: واتساب، اتصال، إنستغرام، وفيسبوك إذا كان الرابط موجود */
 export default function ContactChannels() {
   const channels = [
     {
@@ -56,7 +64,16 @@ export default function ContactChannels() {
       href: `https://instagram.com/${site.instagram}`,
       body: 'شوف آخر التنسيقات والأعمال على حسابنا.',
     },
-  ];
+    // يظهر فقط إذا انحط رابط الفيسبوك في siteConfig
+    site.facebook && {
+      id: 'facebook',
+      Icon: FacebookIcon,
+      title: 'فيسبوك',
+      value: site.nameEn,
+      href: site.facebook,
+      body: 'تابعنا على صفحتنا في فيسبوك.',
+    },
+  ].filter(Boolean);
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

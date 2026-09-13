@@ -75,6 +75,18 @@ export default function Footer() {
                 @{site.instagram}
               </a>
             </li>
+            {site.facebook && (
+              <li>
+                <a
+                  href={site.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block transition hover:text-brand-700"
+                >
+                  فيسبوك
+                </a>
+              </li>
+            )}
             <li>{site.orderNoteAr}</li>
           </ul>
           <WhatsAppButton className="mt-4 w-full sm:w-auto" />

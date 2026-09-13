@@ -1,3 +1,4 @@
+import PageMeta from '../components/PageMeta';
 import ContactChannels from '../components/contact/ContactChannels';
 import OrderForm from '../components/contact/OrderForm';
 import IconBadge from '../components/IconBadge';
@@ -14,6 +15,11 @@ export default function Contact() {
 
   return (
     <>
+      <PageMeta
+        title="تواصل معنا"
+        path="/contact"
+        description="تواصل مع شمس فلاورز على الواتساب أو الهاتف أو إنستغرام، أو عبّي نموذج الطلب وبيتحول رسالة واتساب جاهزة."
+      />
       <section className="bg-petal-gradient">
         <div className="shell py-12 text-center md:py-16">
           <SectionHeading

@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import CategoryFilter from '../components/CategoryFilter';
+import PageMeta from '../components/PageMeta';
 import PackageCard from '../components/PackageCard';
 import SectionHeading from '../components/SectionHeading';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -35,6 +36,11 @@ export default function Bouquets() {
 
   return (
     <>
+      <PageMeta
+        title="الباقات"
+        path="/bouquets"
+        description="تنسيقات شمس فلاورز حسب المناسبة: مواليد، تخرج، حفلات، واستقبالات. أسعار واضحة وطلب مباشر على الواتساب."
+      />
       <section className="bg-petal-gradient">
         <div className="shell py-12 text-center md:py-16">
           <SectionHeading

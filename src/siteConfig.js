@@ -4,6 +4,8 @@
  * المصدر: حساب إنستغرام @shamsflowerskw
  */
 export const site = {
+  // ⚠️ غيّر هذا للدومين الحقيقي قبل الإطلاق — يُستخدم في روابط المشاركة و sitemap
+  url: 'https://shams-flowers.vercel.app',
   nameAr: 'شمس فلاورز',
   nameEn: 'Shams Flowers',
   taglineAr: 'تنسيق استقبالات مواليد وتخرج وحفلات',
@@ -11,6 +13,8 @@ export const site = {
   whatsapp: '96566203815',
   phoneDisplay: '+965 6620 3815',
   instagram: 'shamsflowerskw',
+  // رابط صفحة الفيسبوك — خلّه فاضي إذا ما عندك الرابط وما راح يظهر بالموقع
+  facebook: '',
   deliveryNoteAr: 'توصيل لجميع مناطق الكويت',
   orderNoteAr: 'الطلب والتنسيق على الواتساب',
   // أقل سعر معروض (بالدينار)

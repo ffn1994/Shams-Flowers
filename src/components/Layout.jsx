@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import FloatingWhatsApp from './FloatingWhatsApp';
 
 /** هيكل الصفحة: هيدر ثابت + محتوى + فوتر */
 export default function Layout() {
@@ -17,6 +18,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

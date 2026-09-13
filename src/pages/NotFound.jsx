@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import PageMeta from '../components/PageMeta';
 
 export default function NotFound() {
   return (
     <section className="section">
+      <PageMeta title="الصفحة غير موجودة" />
       <div className="shell max-w-md text-center">
         <div className="text-5xl">🌸</div>
         <h1 className="mt-4 text-hero font-extrabold text-brand-700">٤٠٤</h1>
