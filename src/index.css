@@ -35,8 +35,11 @@
   --color-ink-faint: #9b8792;
 
   /* --- Typography (الخطوط) --- */
-  --font-sans: 'Tajawal', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
-  --font-display: 'Playfair Display', 'Tajawal', ui-serif, Georgia, serif;
+  --font-sans: 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', 'IBM Plex Sans Arabic', ui-serif, Georgia, serif;
+
+  /* الخط ما عنده وزن ٨٠٠ — نخلي extrabold يوقف عند ٧٠٠ بدل ما المتصفح يزوّره */
+  --font-weight-extrabold: 700;
 
   --text-hero: 2.5rem;
   --text-hero--line-height: 1.15;

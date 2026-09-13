@@ -75,7 +75,7 @@ export default function Footer() {
                 @{site.instagram}
               </a>
             </li>
-            <li>{site.hoursAr}</li>
+            <li>{site.orderNoteAr}</li>
           </ul>
           <WhatsAppButton className="mt-4 w-full sm:w-auto" />
         </div>

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import WhatsAppButton from '../WhatsAppButton';
-import { TruckIcon } from '../Icons';
+import { SparkleIcon, TruckIcon } from '../Icons';
 import { site } from '../../siteConfig';
+import { formatKwd } from '../../utils/money';
 import heroArrangement from '../../assets/bouquets/hero-arrangement.svg';
 
 export default function Hero() {
@@ -30,8 +31,8 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-ink-muted md:mx-0 md:text-lg">
-            باقات وتنسيقات وديكور مناسبات — من بوكيه تخرج لين تجهيز استقبال كامل.
-            نختار الورد الطازج ونجهزه بنفس اليوم ونوصله لك.
+            تنسيق استقبالات مواليد وتخرج وحفلات، وباقات ورد طبيعي وصناعي.
+            الطلب والتنسيق على الواتساب، والتوصيل لجميع مناطق الكويت.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
@@ -43,8 +44,8 @@ export default function Hero() {
 
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 text-center md:mx-0 md:text-start">
             {[
-              { value: 'نفس اليوم', label: 'وقت التوصيل' },
-              { value: '٧ أيام', label: 'نستقبل طلباتكم' },
+              { value: formatKwd(site.priceFrom), label: 'الأسعار تبدأ من' },
+              { value: 'أون لاين', label: 'الطلب والتنسيق' },
               { value: 'كل الكويت', label: 'مناطق التوصيل' },
             ].map((stat) => (
               <div key={stat.label}>
@@ -63,11 +64,11 @@ export default function Hero() {
           />
           <div className="card absolute -bottom-5 start-4 flex items-center gap-3 px-4 py-3 sm:start-8">
             <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-100 text-brand-700">
-              <TruckIcon className="h-5 w-5" />
+              <SparkleIcon className="h-5 w-5" />
             </span>
             <div className="leading-tight">
-              <div className="text-sm font-extrabold text-ink">توصيل بنفس اليوم</div>
-              <div className="text-xs text-ink-muted">للطلبات قبل ٦ المساء</div>
+              <div className="text-sm font-extrabold text-ink">{site.orderNoteAr}</div>
+              <div className="text-xs text-ink-muted">تنسيق حسب المناسبة والميزانية</div>
             </div>
           </div>
         </div>

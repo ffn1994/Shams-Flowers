@@ -3,7 +3,7 @@ import { formatKwd } from '../utils/money';
 
 /** بطاقة باقة — صورة، اسم، وصف، سعر يبدأ من، وزر طلب */
 export default function BouquetCard({ bouquet }) {
-  const { name, note, priceFrom, image, tag } = bouquet;
+  const { name, note, priceFrom, priceLabel = 'يبدأ من', image, tag } = bouquet;
 
   return (
     <article className="card group flex flex-col overflow-hidden transition duration-300 ease-soft hover:-translate-y-1 hover:shadow-lift">
@@ -27,7 +27,7 @@ export default function BouquetCard({ bouquet }) {
 
         <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-3">
           <span className="text-sm text-ink-faint">
-            يبدأ من{' '}
+            {priceLabel}{' '}
             <span className="inline-block text-base font-extrabold text-brand-700">
               {formatKwd(priceFrom)}
             </span>
