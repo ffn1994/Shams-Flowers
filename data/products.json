@@ -1,0 +1,314 @@
+[
+  {
+    "id": "p-001",
+    "slug": "red-rose-classic",
+    "name": {
+      "ar": "الورد الأحمر الكلاسيكي",
+      "en": "Classic Red Roses"
+    },
+    "description": {
+      "ar": "خمسون وردة حمراء هولندية منسقة بشكل دائري مع أوراق اليوكاليبتوس، الاختيار الأول لكل مناسبة رومانسية.",
+      "en": "Fifty Dutch red roses arranged in a round dome with eucalyptus greens — the first pick for every romantic moment."
+    },
+    "includes": {
+      "ar": "50 وردة حمراء، يوكاليبتوس، تغليف مخملي، كرت إهداء",
+      "en": "50 red roses, eucalyptus, velvet wrap, gift card"
+    },
+    "price": 32500,
+    "image": "/products/roses-red.svg",
+    "occasion": "love",
+    "size": {
+      "ar": "كبير - 45 سم",
+      "en": "Large - 45 cm"
+    },
+    "stock": 14,
+    "featured": true,
+    "createdAt": "2026-01-10T08:00:00.000Z"
+  },
+  {
+    "id": "p-002",
+    "slug": "pink-peony-bouquet",
+    "name": {
+      "ar": "باقة البيوني الوردي",
+      "en": "Pink Peony Bouquet"
+    },
+    "description": {
+      "ar": "بيوني وردي ناعم مع ورد الجوري الفاتح ولمسة من الجبسوفيليا، باقة هادئة وأنيقة.",
+      "en": "Soft pink peonies with pale garden roses and a touch of gypsophila — calm and elegant."
+    },
+    "includes": {
+      "ar": "12 بيوني، 10 ورد جوري، جبسوفيليا، ورق كرافت",
+      "en": "12 peonies, 10 garden roses, gypsophila, kraft wrap"
+    },
+    "price": 27000,
+    "image": "/products/pink-peony.svg",
+    "occasion": "birthday",
+    "size": {
+      "ar": "متوسط - 38 سم",
+      "en": "Medium - 38 cm"
+    },
+    "stock": 9,
+    "featured": true,
+    "createdAt": "2026-01-12T08:00:00.000Z"
+  },
+  {
+    "id": "p-003",
+    "slug": "sand-elegance-box",
+    "name": {
+      "ar": "بوكس الرمال الأنيق",
+      "en": "Sand Elegance Box"
+    },
+    "description": {
+      "ar": "بوكس خشبي بألوان ترابية هادئة مع ورد الشمواه والقطن المجفف، مناسب للمكاتب والإهداءات الرسمية.",
+      "en": "A wooden box in warm earth tones with suede roses and dried cotton — ideal for offices and formal gifting."
+    },
+    "includes": {
+      "ar": "بوكس خشبي، 25 وردة، قطن مجفف، شمع معطر",
+      "en": "Wooden box, 25 roses, dried cotton, scented candle"
+    },
+    "price": 24500,
+    "image": "/products/sand-elegance.svg",
+    "occasion": "thanks",
+    "size": {
+      "ar": "متوسط - 30 سم",
+      "en": "Medium - 30 cm"
+    },
+    "stock": 11,
+    "featured": false,
+    "createdAt": "2026-01-15T08:00:00.000Z"
+  },
+  {
+    "id": "p-004",
+    "slug": "green-garden-vase",
+    "name": {
+      "ar": "فازة الحديقة الخضراء",
+      "en": "Green Garden Vase"
+    },
+    "description": {
+      "ar": "تنسيق أخضر مورق بالفازة الزجاجية مع الأقحوان الأبيض، يعطي إحساس الحديقة داخل البيت.",
+      "en": "A leafy green arrangement in a glass vase with white chrysanthemums — a garden feeling indoors."
+    },
+    "includes": {
+      "ar": "فازة زجاجية، أوراق خضراء مشكلة، أقحوان أبيض",
+      "en": "Glass vase, mixed foliage, white chrysanthemums"
+    },
+    "price": 19500,
+    "image": "/products/green-garden.svg",
+    "occasion": "congrats",
+    "size": {
+      "ar": "متوسط - 40 سم",
+      "en": "Medium - 40 cm"
+    },
+    "stock": 7,
+    "featured": false,
+    "createdAt": "2026-01-18T08:00:00.000Z"
+  },
+  {
+    "id": "p-005",
+    "slug": "sunny-tulips",
+    "name": {
+      "ar": "التوليب المشمس",
+      "en": "Sunny Tulips"
+    },
+    "description": {
+      "ar": "ثلاثون توليب أصفر بلون الشمس، باقة تفتح النفس وترفع المزاج من أول نظرة.",
+      "en": "Thirty sunshine-yellow tulips — a bouquet that lifts the mood at first glance."
+    },
+    "includes": {
+      "ar": "30 توليب أصفر، ورق شفاف، شريطة حرير",
+      "en": "30 yellow tulips, clear wrap, silk ribbon"
+    },
+    "price": 21000,
+    "image": "/products/sunny-tulips.svg",
+    "occasion": "birthday",
+    "size": {
+      "ar": "متوسط - 35 سم",
+      "en": "Medium - 35 cm"
+    },
+    "stock": 16,
+    "featured": true,
+    "createdAt": "2026-01-20T08:00:00.000Z"
+  },
+  {
+    "id": "p-006",
+    "slug": "blue-serenity",
+    "name": {
+      "ar": "الصفاء الأزرق",
+      "en": "Blue Serenity"
+    },
+    "description": {
+      "ar": "هيدرانجيا زرقاء مع ورد أبيض ولمسة فضية، تنسيق راقي يناسب المواساة والمجاملات الهادئة.",
+      "en": "Blue hydrangeas with white roses and a silver accent — a refined, quiet arrangement."
+    },
+    "includes": {
+      "ar": "3 هيدرانجيا، 15 وردة بيضاء، أوراق فضية",
+      "en": "3 hydrangeas, 15 white roses, silver foliage"
+    },
+    "price": 29000,
+    "image": "/products/blue-serenity.svg",
+    "occasion": "sympathy",
+    "size": {
+      "ar": "كبير - 42 سم",
+      "en": "Large - 42 cm"
+    },
+    "stock": 6,
+    "featured": false,
+    "createdAt": "2026-01-22T08:00:00.000Z"
+  },
+  {
+    "id": "p-007",
+    "slug": "lavender-dream",
+    "name": {
+      "ar": "حلم اللافندر",
+      "en": "Lavender Dream"
+    },
+    "description": {
+      "ar": "لافندر طبيعي مع ورد بنفسجي فاتح، رائحة هادئة تدوم أيام طويلة.",
+      "en": "Natural lavender with pale purple roses — a soft scent that lingers for days."
+    },
+    "includes": {
+      "ar": "حزمة لافندر، 20 وردة بنفسجية، ورق كرافت",
+      "en": "Lavender bundle, 20 purple roses, kraft wrap"
+    },
+    "price": 22500,
+    "image": "/products/lavender-dream.svg",
+    "occasion": "thanks",
+    "size": {
+      "ar": "متوسط - 36 سم",
+      "en": "Medium - 36 cm"
+    },
+    "stock": 12,
+    "featured": false,
+    "createdAt": "2026-01-25T08:00:00.000Z"
+  },
+  {
+    "id": "p-008",
+    "slug": "peach-blossom",
+    "name": {
+      "ar": "زهر الخوخ",
+      "en": "Peach Blossom"
+    },
+    "description": {
+      "ar": "درجات الخوخ والبرتقالي الفاتح مع ورد الرانونكولس، باقة دافئة ومبهجة.",
+      "en": "Peach and soft-orange tones with ranunculus — warm and cheerful."
+    },
+    "includes": {
+      "ar": "رانونكولس، ورد خوخي، أوراق موسمية",
+      "en": "Ranunculus, peach roses, seasonal foliage"
+    },
+    "price": 25500,
+    "image": "/products/peach-blossom.svg",
+    "occasion": "congrats",
+    "size": {
+      "ar": "متوسط - 38 سم",
+      "en": "Medium - 38 cm"
+    },
+    "stock": 10,
+    "featured": true,
+    "createdAt": "2026-01-28T08:00:00.000Z"
+  },
+  {
+    "id": "p-009",
+    "slug": "white-lily-elegance",
+    "name": {
+      "ar": "أناقة الليليوم الأبيض",
+      "en": "White Lily Elegance"
+    },
+    "description": {
+      "ar": "ليليوم أبيض عطر مع أوركيد أبيض، تنسيق نظيف وراقي يليق بالمناسبات الرسمية والأعراس.",
+      "en": "Fragrant white lilies with white orchids — clean and refined for weddings and formal events."
+    },
+    "includes": {
+      "ar": "8 ليليوم، 6 أوركيد، أوراق خضراء، تغليف ساتان",
+      "en": "8 lilies, 6 orchids, greens, satin wrap"
+    },
+    "price": 38000,
+    "image": "/products/white-lily.svg",
+    "occasion": "wedding",
+    "size": {
+      "ar": "كبير - 50 سم",
+      "en": "Large - 50 cm"
+    },
+    "stock": 5,
+    "featured": true,
+    "createdAt": "2026-02-01T08:00:00.000Z"
+  },
+  {
+    "id": "p-010",
+    "slug": "blush-baby-box",
+    "name": {
+      "ar": "بوكس المولود الوردي",
+      "en": "Blush Baby Box"
+    },
+    "description": {
+      "ar": "بوكس مواليد بلون وردي ناعم مع بالون صغير ودبدوب، هدية لطيفة للمستشفى.",
+      "en": "A soft pink newborn box with a small balloon and teddy — a sweet hospital gift."
+    },
+    "includes": {
+      "ar": "بوكس ورد وردي، بالون، دبدوب صغير، كرت",
+      "en": "Pink flower box, balloon, small teddy, card"
+    },
+    "price": 26500,
+    "image": "/products/blush-box.svg",
+    "occasion": "newborn",
+    "size": {
+      "ar": "صغير - 28 سم",
+      "en": "Small - 28 cm"
+    },
+    "stock": 13,
+    "featured": false,
+    "createdAt": "2026-02-04T08:00:00.000Z"
+  },
+  {
+    "id": "p-011",
+    "slug": "mint-fresh",
+    "name": {
+      "ar": "النعناع المنعش",
+      "en": "Mint Fresh"
+    },
+    "description": {
+      "ar": "تنسيق بدرجات التركوازي والأبيض مع أوراق النعناع الطبيعي، خفيف ومنعش.",
+      "en": "Turquoise and white tones with fresh mint leaves — light and refreshing."
+    },
+    "includes": {
+      "ar": "ورد أبيض، نعناع طبيعي، فازة سيراميك",
+      "en": "White roses, fresh mint, ceramic vase"
+    },
+    "price": 18500,
+    "image": "/products/mint-fresh.svg",
+    "occasion": "thanks",
+    "size": {
+      "ar": "صغير - 30 سم",
+      "en": "Small - 30 cm"
+    },
+    "stock": 15,
+    "featured": false,
+    "createdAt": "2026-02-06T08:00:00.000Z"
+  },
+  {
+    "id": "p-012",
+    "slug": "crimson-luxe",
+    "name": {
+      "ar": "القرمزي الفاخر",
+      "en": "Crimson Luxe"
+    },
+    "description": {
+      "ar": "مئة وردة قرمزية في بوكس مخملي فاخر، الهدية الأكبر لأهم المناسبات.",
+      "en": "One hundred crimson roses in a luxe velvet box — our grandest gift."
+    },
+    "includes": {
+      "ar": "100 وردة قرمزية، بوكس مخملي، كرت مذهب",
+      "en": "100 crimson roses, velvet box, gold-foil card"
+    },
+    "price": 65000,
+    "image": "/products/crimson-luxe.svg",
+    "occasion": "love",
+    "size": {
+      "ar": "فاخر - 60 سم",
+      "en": "Luxe - 60 cm"
+    },
+    "stock": 4,
+    "featured": true,
+    "createdAt": "2026-02-09T08:00:00.000Z"
+  }
+]
