@@ -1,7 +1,8 @@
 import Hero from '../components/home/Hero';
 import FeatureStrip from '../components/home/FeatureStrip';
+import FeaturedPackages from '../components/home/FeaturedPackages';
 import Occasions from '../components/home/Occasions';
-import FeaturedBouquets from '../components/home/FeaturedBouquets';
+import TrustSection from '../components/home/TrustSection';
 import HowToOrder from '../components/home/HowToOrder';
 import ClosingCta from '../components/home/ClosingCta';
 
@@ -10,8 +11,9 @@ export default function Home() {
     <>
       <Hero />
       <FeatureStrip />
+      <FeaturedPackages />
       <Occasions />
-      <FeaturedBouquets />
+      <TrustSection />
       <HowToOrder />
       <ClosingCta />
     </>

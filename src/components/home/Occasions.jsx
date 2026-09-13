@@ -16,14 +16,22 @@ export default function Occasions() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {occasions.map((occasion) => (
-            <article
+            <Link
               key={occasion.id}
-              className="group rounded-petal border border-cream-300/70 bg-cream-50 p-6 transition duration-300 ease-soft hover:-translate-y-1 hover:border-brand-200 hover:bg-brand-50"
+              to={`/bouquets?category=${occasion.category}`}
+              className="group block rounded-petal border border-cream-300/70 bg-cream-50 p-6 transition duration-300 ease-soft hover:-translate-y-1 hover:border-brand-200 hover:bg-brand-50"
             >
-              <IconBadge name={occasion.icon} className="group-hover:bg-white" />
+              <IconBadge
+                name={occasion.icon}
+                className="h-12 w-12 bg-brand-100 text-brand-700 group-hover:bg-white"
+              />
               <h3 className="mt-4 font-extrabold text-ink">{occasion.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">{occasion.body}</p>
-            </article>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-700">
+                تصفح التنسيقات
+                <ArrowIcon />
+              </span>
+            </Link>
           ))}
         </div>
 

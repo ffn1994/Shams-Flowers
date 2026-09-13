@@ -6,6 +6,12 @@ import { formatKwd } from '../../utils/money';
 import heroArrangement from '../../assets/bouquets/hero-arrangement.svg';
 
 export default function Hero() {
+  const stats = [
+    { value: formatKwd(site.priceFrom), label: 'الأسعار تبدأ من' },
+    { value: 'أون لاين', label: 'الطلب والتنسيق' },
+    { value: 'كل الكويت', label: 'مناطق التوصيل' },
+  ];
+
   return (
     <section className="bg-petal-gradient relative overflow-hidden">
       {/* دوائر زخرفية خفيفة بالخلفية */}
@@ -25,29 +31,35 @@ export default function Hero() {
             {site.deliveryNoteAr}
           </span>
 
-          <h1 className="mt-5 text-hero font-extrabold text-ink sm:text-5xl">
-            ورد يعبّر عنك
-            <span className="block text-brand-gradient">بكل مناسبة</span>
-          </h1>
+          <div className="mt-6">
+            <h1 className="text-3xl font-extrabold text-brand-700 sm:text-4xl">{site.nameAr}</h1>
+            <div className="mt-1">
+              <span className="ltr inline-block font-display text-sm tracking-[0.24em] text-ink-faint uppercase">
+                {site.nameEn}
+              </span>
+            </div>
+          </div>
 
-          <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-ink-muted md:mx-0 md:text-lg">
-            تنسيق استقبالات مواليد وتخرج وحفلات، وباقات ورد طبيعي وصناعي.
-            الطلب والتنسيق على الواتساب، والتوصيل لجميع مناطق الكويت.
+          <p className="mt-5 text-2xl font-extrabold leading-snug text-ink sm:text-3xl">
+            ننسّق لك ورد يليق <span className="text-brand-gradient">بكل مناسبة</span>
+          </p>
+
+          <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-ink-muted md:mx-0 md:text-lg">
+            تنسيق استقبالات مواليد وتخرج وحفلات، وباقات ورد طبيعي وصناعي بأحجام وألوان
+            تختارها أنت. الطلب والتنسيق على الواتساب، والتوصيل لجميع مناطق الكويت.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-            <Link to="/bouquets" className="btn-primary">
+            <WhatsAppButton message="السلام عليكم، أبغى أستفسر عن التنسيقات 🌸">
+              اطلب على الواتساب
+            </WhatsAppButton>
+            <Link to="/bouquets" className="btn-outline">
               تصفح الباقات
             </Link>
-            <WhatsAppButton variant="light">استفسر واتساب</WhatsAppButton>
           </div>
 
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 text-center md:mx-0 md:text-start">
-            {[
-              { value: formatKwd(site.priceFrom), label: 'الأسعار تبدأ من' },
-              { value: 'أون لاين', label: 'الطلب والتنسيق' },
-              { value: 'كل الكويت', label: 'مناطق التوصيل' },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div key={stat.label}>
                 <dt className="text-base font-extrabold text-brand-700 sm:text-lg">{stat.value}</dt>
                 <dd className="mt-1 text-xs text-ink-muted">{stat.label}</dd>

@@ -20,15 +20,17 @@ const icons = {
   arch: ArchIcon,
 };
 
-/** دائرة ملوّنة فيها أيقونة — تُستخدم بالمميزات والمناسبات */
-export default function IconBadge({ name, className = '' }) {
+/** دائرة ملوّنة فيها أيقونة — تُستخدم بالمميزات والمناسبات والفلاتر */
+export default function IconBadge({
+  name,
+  className = 'h-12 w-12 bg-brand-100 text-brand-700',
+  iconClassName = 'h-6 w-6',
+}) {
   const Icon = icons[name] ?? SparkleIcon;
 
   return (
-    <span
-      className={`grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-100 text-brand-700 ${className}`}
-    >
-      <Icon className="h-6 w-6" />
+    <span className={`grid shrink-0 place-items-center rounded-full ${className}`}>
+      <Icon className={iconClassName} />
     </span>
   );
 }

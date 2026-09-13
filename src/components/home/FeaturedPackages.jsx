@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import BouquetCard from '../BouquetCard';
+import PackageCard from '../PackageCard';
 import SectionHeading from '../SectionHeading';
 import { ArrowIcon } from '../Icons';
-import { featuredBouquets } from '../../data/home';
+import { featuredPackages } from '../../data/packages';
 
-export default function FeaturedBouquets() {
+export default function FeaturedPackages() {
   return (
     <section className="section">
       <div className="shell">
@@ -12,18 +12,18 @@ export default function FeaturedBouquets() {
           <SectionHeading
             align="start"
             eyebrow="مختارات"
-            title="باقات مختارة من شمس"
-            body="تشكيلة سريعة من الأكثر طلباً — وكل باقة تنسّق حسب ذوقك."
+            title="تنسيقات مختارة من شمس"
+            body="لمحة سريعة عن الأكثر طلباً — وكل تنسيقة تتغيّر حسب ذوقك والمناسبة."
           />
           <Link to="/bouquets" className="btn-ghost hidden sm:inline-flex">
-            الكل
+            كل الباقات
             <ArrowIcon />
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredBouquets.map((bouquet) => (
-            <BouquetCard key={bouquet.id} bouquet={bouquet} />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredPackages.map((item) => (
+            <PackageCard key={item.id} item={item} />
           ))}
         </div>
 
