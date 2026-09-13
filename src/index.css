@@ -111,6 +111,17 @@
   @apply btn text-brand-700 hover:bg-brand-50;
 }
 
+@utility label {
+  @apply mb-1.5 block text-sm font-bold text-ink;
+}
+
+@utility field {
+  @apply w-full rounded-petal border border-cream-300 bg-white px-4 py-2.5 text-sm text-ink
+    outline-none transition duration-200 ease-soft
+    placeholder:text-ink-faint
+    focus:border-brand-400 focus:ring-2 focus:ring-brand-100;
+}
+
 @utility card {
   @apply rounded-petal border border-cream-300/70 bg-white shadow-soft;
 }
