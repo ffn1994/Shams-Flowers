@@ -1,97 +1,92 @@
-# 🌸 Shams Flowers — شمس فلاورز
+# 🌸 شمس فلاورز — Shams Flowers
 
-متجر ورد إلكتروني ثنائي اللغة (عربي RTL / إنجليزي LTR) مبني على Next.js، مع سلة شراء، صفحة طلب وتوصيل داخل الكويت، ولوحة تحكم للمنتجات والطلبات.
+واجهة موقع شمس فلاورز: ورد وباقات وتنسيقات وديكور مناسبات في الكويت.
+هذي المرحلة الأولى — الهيكل العام، التنقل، ونظام التصميم فقط. الصفحات نفسها بتنبني بالمرحلة الجاية.
 
----
+## التقنيات
 
-## بالعربي
-
-### المميزات
-
-- **واجهة ثنائية اللغة**: مسارات `/ar` و `/en` مع تبديل فوري، والاتجاه يتغير تلقائياً بين RTL و LTR.
-- **كتالوج الباقات**: بحث، فلترة حسب المناسبة، وترتيب حسب السعر أو الأحدث.
-- **صفحة منتج كاملة**: الوصف، المحتويات، الحجم، ومنتجات مقترحة من نفس المناسبة.
-- **سلة شراء**: محفوظة في المتصفح وتبقى بعد إغلاق الصفحة، ومتزامنة بين التبويبات.
-- **إتمام الطلب**: بيانات المستلم، المنطقة (قائمة مناطق الكويت)، القطعة والشارع، تاريخ ووقت التوصيل، كلمة إهداء، والدفع عند الاستلام أو كي نت.
-- **رسوم توصيل ذكية**: توصيل مجاني فوق حد معيّن يُضبط من متغيرات البيئة.
-- **صفحة تأكيد الطلب**: رقم طلب مختصر وزر يرسل تفاصيل الطلب على الواتساب.
-- **لوحة تحكم** على `/ar/admin`: إضافة وتعديل وحذف المنتجات، ومتابعة الطلبات وتغيير حالتها.
-- **الأسعار بالدينار الكويتي** بثلاث خانات عشرية دائماً (مثال: `32.500 د.ك`)، ومخزّنة داخلياً بالفلس كأرقام صحيحة حتى لا يحصل خطأ تقريب.
-
-### التشغيل محلياً
-
-```bash
-npm install
-cp .env.example .env.local   # وغيّر كلمة مرور لوحة التحكم
-npm run dev
-```
-
-ثم افتح `http://localhost:3000` — سيتم تحويلك تلقائياً إلى `/ar`.
-
-لوحة التحكم على `http://localhost:3000/ar/admin`، وكلمة المرور الافتراضية `shams2026` (غيّرها من `.env.local`).
-
-### الأوامر
-
-| الأمر | الوظيفة |
+| الأداة | الاستخدام |
 | --- | --- |
-| `npm run dev` | تشغيل بيئة التطوير |
-| `npm run build` | بناء نسخة الإنتاج |
-| `npm start` | تشغيل نسخة الإنتاج |
-| `npm run lint` | فحص الكود |
-| `npm run typecheck` | فحص الأنواع |
+| Vite + React (JavaScript) | أساس المشروع |
+| Tailwind CSS v4 | التنسيق ونظام التصميم |
+| React Router v7 | التنقل بين الصفحات |
 
-### أين تعدّل المحتوى
-
-- **بيانات المحل** (الهاتف، الواتساب، إنستغرام، رسوم التوصيل): `src/lib/config.ts` أو متغيرات البيئة.
-- **نصوص الواجهة** بالعربي والإنجليزي: `src/lib/i18n.ts`.
-- **المنتجات**: من لوحة التحكم، أو مباشرة في `data/products.json`.
-- **المناسبات**: `src/lib/types.ts`.
-- **الألوان والخطوط**: `tailwind.config.ts`.
-
-### ملاحظة مهمة عن التخزين
-
-المنتجات والطلبات مخزّنة حالياً في ملفات JSON داخل مجلد `data/`. هذا يشتغل ممتاز على سيرفر عادي أو VPS، لكن على منصات serverless مثل Vercel نظام الملفات مؤقت — أي طلب جديد أو تعديل من لوحة التحكم ممكن يضيع عند إعادة التشغيل.
-
-قبل النشر على Vercel، بدّل الدوال الموجودة في `src/lib/store.ts` إلى قاعدة بيانات (Supabase مثلاً). كل التعامل مع البيانات يمر عبر هذا الملف فقط، فالتبديل يتم من مكان واحد دون تغيير باقي التطبيق.
-
----
-
-## In English
-
-A bilingual (Arabic RTL / English LTR) flower shop built with Next.js 16, React 19, TypeScript and Tailwind CSS.
-
-### Features
-
-- Locale-routed storefront (`/ar`, `/en`) with automatic direction switching.
-- Catalog with search, occasion filter and price sorting.
-- Product pages with related items.
-- Persistent cart backed by `localStorage`, synced across tabs via `useSyncExternalStore`.
-- Checkout with Kuwait areas, block/street address, delivery date and slot, gift message, COD or KNET.
-- Automatic free delivery above a configurable threshold.
-- Order confirmation page with a prefilled WhatsApp message.
-- Password-protected admin dashboard for product CRUD and order status.
-- KWD amounts always rendered with three decimals; stored internally as integer fils.
-
-### Getting started
+## التشغيل
 
 ```bash
 npm install
-cp .env.example .env.local   # set your own ADMIN_PASSWORD
-npm run dev
+npm run dev      # بيئة التطوير
+npm run build    # بناء نسخة الإنتاج
+npm run preview  # معاينة نسخة الإنتاج
+npm run lint     # فحص الكود
 ```
 
-### Project layout
+## هيكل المجلدات
 
 ```
-src/app/[lang]/        storefront pages (home, shop, product, cart, checkout, order, admin)
-src/app/api/           REST routes for products, orders and admin auth
-src/components/        UI components (header, cards, cart, checkout form, dashboard)
-src/lib/               i18n dictionary, money helpers, data store, validation, cart store
-data/                  JSON seed data (products.json, orders.json)
-public/products/       placeholder bouquet artwork (SVG)
-middleware.ts          redirects `/` to the visitor's preferred locale
+src/
+├── assets/          الصور والشعار
+│   └── logo.svg     شعار مؤقت — استبدله بشعار المحل
+├── components/      عناصر الواجهة المشتركة
+│   ├── Layout.jsx       الهيكل: هيدر + محتوى + فوتر
+│   ├── Header.jsx       الهيدر مع قائمة الجوال
+│   ├── Footer.jsx       الفوتر مع زر الواتساب وشريط التوصيل
+│   ├── Logo.jsx         الشعار والاسم
+│   ├── WhatsAppButton.jsx
+│   ├── ScrollToTop.jsx
+│   └── PagePlaceholder.jsx
+├── pages/           الصفحات (حالياً مؤقتة)
+│   ├── Home.jsx         /
+│   ├── Bouquets.jsx     /bouquets
+│   ├── Contact.jsx      /contact
+│   └── NotFound.jsx     أي مسار ثاني
+├── siteConfig.js    بيانات المحل والروابط
+├── index.css        نظام التصميم
+├── App.jsx          المسارات
+└── main.jsx         نقطة البداية
 ```
 
-### Swapping the data layer
+## نظام التصميم
 
-Every read and write goes through `src/lib/store.ts`. Replace the functions there with Supabase (or any database) calls to make the app serverless-ready — nothing else in the app touches storage directly.
+كل التوكنز معرّفة في `src/index.css` داخل `@theme`، وتقدر تستخدمها مباشرة كـ Tailwind classes.
+
+### الألوان
+
+| المجموعة | الاستخدام | أمثلة |
+| --- | --- | --- |
+| `brand-50` → `brand-900` | الماجنتا/الوردي الأساسي من الشعار. الأساسي `brand-600` = `#C2185B` | `bg-brand-600` `text-brand-700` |
+| `cream-50` → `cream-300` | الخلفيات الكريمية والبيضاء | `bg-cream-100` `border-cream-300` |
+| `leaf-100` / `leaf-500` / `leaf-700` | لمسة خضراء للأوراق | `text-leaf-700` |
+| `ink` / `ink-muted` / `ink-faint` | ألوان النصوص | `text-ink` `text-ink-muted` |
+
+### الخطوط
+
+- `font-sans` → **Tajawal** (الخط الأساسي للعربي).
+- `font-display` → **Playfair Display** (للاسم الإنجليزي واللمسات اللاتينية).
+- `text-hero` مقاس العناوين الكبيرة.
+
+### المسافات والحواف والظلال
+
+- `p-gutter` هامش جانبي موحّد، `py-section` ارتفاع القسم، `h-header` ارتفاع الهيدر.
+- `rounded-petal` و `rounded-bloom` للحواف الناعمة.
+- `shadow-soft` و `shadow-lift` للظلال الوردية الخفيفة.
+
+### الكلاسات الجاهزة
+
+`btn` · `btn-primary` · `btn-outline` · `btn-ghost` · `card` · `nav-link` · `nav-link-active` · `shell` · `section` · `bg-petal-gradient` · `text-brand-gradient`
+
+مثال:
+
+```jsx
+<section className="section">
+  <div className="shell">
+    <button className="btn-primary">اطلب الحين</button>
+  </div>
+</section>
+```
+
+## قبل الإطلاق
+
+1. استبدل `src/assets/logo.svg` و `public/favicon.svg` بشعار المحل الرسمي.
+2. عدّل رقم الواتساب والهاتف وإنستغرام في `src/siteConfig.js`.
+3. ملف `vercel.json` موجود عشان الروابط المباشرة مثل `/bouquets` تشتغل عند إعادة تحميل الصفحة.
